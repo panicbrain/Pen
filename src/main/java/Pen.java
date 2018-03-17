@@ -38,7 +38,11 @@ public class Pen {
 
     @Override
     public String toString() {
-        return brand + " " + quantity + " " + color;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(brand);
+        stringBuilder.append(quantity);
+        stringBuilder.append(color);
+        return StringBuilder;
     }
 
     @Override
@@ -49,15 +53,20 @@ public class Pen {
         Pen pen = (Pen) o;
 
         if (quantity != pen.quantity) return false;
-        if (brand != null ? !brand.equals(pen.brand) : pen.brand != null) return false;
-        return color != null ? color.equals(pen.color) : pen.color == null;
-    }
+        if ((brand != null) && (brand.equals(pen.brand)) {
+            return true;
+        } else if (brand != null){
+            return false;
+        } else if (brand == null) {
+            return -1;
+            return color != null ? color.equals(pen.color) : pen.color == null;
+        }
 
-    @Override
-    public int hashCode() {
-        int result = brand != null ? brand.hashCode() : 0;
-        result = 31 * result + (color != null ? color.hashCode() : 0);
-        result = 31 * result + quantity;
-        return result;
+        @Override
+        public int hashCode () {
+            int result = brand != null ? brand.hashCode() : 0;
+            result = 31 * result + (color != null ? color.hashCode() : 0);
+            result = 31 * result + quantity;
+            return result;
+        }
     }
-}
