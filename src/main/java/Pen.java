@@ -70,4 +70,8 @@ public class Pen {
         result = 31 * result + quantity;
         return result;
     }
+
+    public void checkGit(){
+        System.out.println("I just want to know hot git works");
+    }
 }
